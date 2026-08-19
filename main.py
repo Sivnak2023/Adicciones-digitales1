@@ -12,6 +12,9 @@ factos = ["La mayoría de las personas que sufren adicción tecnológica experim
 "Las redes sociales tienen aspectos positivos y negativos, y debemos ser conscientes de ambos cuando utilicemos estas plataformas"
 ]
 
+coc = ["Cara",
+       "Cruz"]
+
 @app.route("/")
 def hello_world():
     return '<h1>Hello, World!</h1> <a href="/facts">¡Ver un dato aleatorio!</a>'
@@ -35,5 +38,9 @@ def about():
 @app.route("/facts")
 def facts():
     return f"<p>{random.choice(factos)}</p>"
+
+@app.route("/shshsecreto")
+def shshsecreto():
+    return f"<p>{random.choice(coc)}"
 
 app.run(debug=True)
